@@ -67,7 +67,6 @@ public class DSIntro{
 	  		System.out.println(printOutput);
 	  	}
 		public void goBack()  {
-	  		
 	  		driver.navigate().back();
 	  	}
 		public void refresh() {
@@ -75,7 +74,7 @@ public class DSIntro{
 		}
 		public void quit() {
 			driver.close();
-			driver.quit();
+			
 		}
 		
 		

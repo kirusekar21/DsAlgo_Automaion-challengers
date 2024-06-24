@@ -1,8 +1,8 @@
   Feature: To Test Graph page
   
-  Scenario: Login page
-  Given The User is on the DS Algo Sign in page
-  When The User clicks Login button after entering valid "numpygirls" and "@Aagks123"
+  #Scenario: Login page
+  #Given The User is on the DS Algo Sign in page
+  #When The User clicks Login button after entering valid "numpygirls" and "@Aagks123"
  
   #Scenario: Graph home page
     #Given The user is on the graph home page
