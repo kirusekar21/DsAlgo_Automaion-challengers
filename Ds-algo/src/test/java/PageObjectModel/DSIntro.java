@@ -73,7 +73,10 @@ public class DSIntro{
 		public void refresh() {
 			driver.navigate().refresh();
 		}
-		
+		public void quit() {
+			driver.close();
+			driver.quit();
+		}
 		
 		
 		

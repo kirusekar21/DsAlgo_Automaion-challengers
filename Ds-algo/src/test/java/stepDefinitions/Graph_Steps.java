@@ -36,8 +36,8 @@ public Graph_Steps() throws IOException {
     //	  From graph POM object
 	
 	@Given("The user is on the DS Algo Sign in Page")
-	public void The_user_is_on_the_DS_Algo_Sign_in_Page() {
-    	login.clickSignIn();
+	public void The_user_is_on_the_DS_Algo_sign_in_Page() {
+		login.clickSignIn();
 	}
    
     @When("The user clicks login button after entering valid {string} and valid {string}")

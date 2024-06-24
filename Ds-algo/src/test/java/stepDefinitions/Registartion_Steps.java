@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import PageObjectModel.RegistrationPage;
 import PageObjectModel.graphPage;
+import PageObjectModel.loginPages;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -23,10 +24,13 @@ public class Registartion_Steps {
 	WebDriverWait wait=new  WebDriverWait(driver,Duration.ofSeconds(5));
 	public TestBaseT tc;
 	RegistrationPage register;
-	
+	loginPages login;
+	private graphPage graph;
    public Registartion_Steps() throws IOException {
 		tc=new TestBaseT();
 		register=new RegistrationPage(tc.WebDriverManager());
+		login=new loginPages(tc.WebDriverManager());
+		graph=new graphPage(tc.WebDriverManager());
 	}
 	
     
@@ -37,6 +41,7 @@ public class Registartion_Steps {
 	}
 	@When("The user clicks Register button")
 	public void the_user_clicks_register_button() {
+		
 		register.registerlink();
 	}
    @Then("The error message appears below  username textbox")
@@ -94,6 +99,33 @@ public class Registartion_Steps {
 	@Then("user should be redirected to login page")
 	public void user_should_be_redirected_to_login_page() {
 		 System.out.println("user redirected:");
+	}
+	@When("user enter username with digits")
+	public void user_enter_username_with_digits() {
+	  register.username();
+	  register.ClickregisterButton();
+   }
+	@When("user click register after enter password with digits")
+	public void user_click_register_after_enter_password_with_digits() {
+	    register.passwordDigits();
+	}
+
+	@Then("user should see invalid password message")
+	public void user_should_see_invalid_password_message() {
+	   register.passwordValErr();
+	}
+
+	@When("user enter username and password with correct password confimation")
+	public void user_enter_username_and_password_with_correct_password_confimation() {
+	    register.username();
+	    register.password();
+	    register.passwordconfirm();
+	    register.ClickregisterButton();
+	}
+
+	@Then("The user should able to see  successful message New Account Created.You are logged in as ninjagirlss on the DS Algo Home Page")
+	public void the_user_should_able_to_see_successful_message_new_account_created_you_are_logged_in_as_ninjagirlss_on_the_ds_algo_home_page() {
+	    graph.toHomePage();
 	}
 
 }

@@ -30,19 +30,16 @@ public class LoginstepsDefinition {
 		DSIntroduction=new DSIntro(tc.WebDriverManager());
 		login=new loginPages(tc.WebDriverManager());
 		try_me=new TryMe(tc.WebDriverManager());
-	
+		graph=new graphPage(tc.WebDriverManager());
 	}
 	  
 		
-		
-		@Given("The User is on the DS Algo Sign in page")
+   @Given("The User is on the DS Algo Sign in page")
 	    public void the_user_is_on_the_ds_algo_sign_in_page()  {
-	        
-	    	login.clickSignIn();
-	    	
-	    }
+	        login.clickSignIn();
+	    	}
 
-	    @When("The User clicks Login button after entering valid {string} and {string}")
+	 @When("The User clicks Login button after entering valid {string} and {string}")
 	    public void the_user_clicks_login_button_after_entering_valid_and(String user, String pass)  {
 	        
 	    	login.enterUsername(user);
@@ -121,7 +118,9 @@ public void user_on_practice_question() {
 public void user_click_practice() throws InterruptedException {
 	DSIntroduction.goBack();
 	Thread.sleep(2000);
-	DSIntroduction.goBack();
+	graph.toHomePage();
+	DSIntroduction.quit();
+	
 }
 
 

@@ -50,6 +50,9 @@ public class RegistrationPage {
   public void password() {
 	  driver.findElement(password).sendKeys("@Aagks123");
   }
+  public void passwordDigits() {
+	  driver.findElement(password).sendKeys("1234567");
+  }
   public void passwordconfirm() {
 	  driver.findElement(passwordConfirm).sendKeys("wrongpass");
   }

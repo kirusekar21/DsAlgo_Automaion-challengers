@@ -1,8 +1,8 @@
 Feature: Login page Automation of DS-ALGO 
 
 Scenario: Login page
-Given The User is on the DS Algo Sign in page
-When The User clicks Login button after entering valid "numpygirls" and "@Aagks123"
+#Given The User is on the DS Algo Sign in page
+#When The User clicks Login button after entering valid "numpygirls" and "@Aagks123"
 Then The User should navigate to Data structures - Introduction page
 
 Scenario: Data structures - Introduction page

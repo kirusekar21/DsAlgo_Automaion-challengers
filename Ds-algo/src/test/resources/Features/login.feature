@@ -1,10 +1,7 @@
-#Feature: login page 
+#Feature: Home page 
 #
 #Scenario: DS Algo HomePage
-#Given The user is on the DS Algo Sign
-#
-#Scenario: DS Algo Sign in Page 
-#Given The user is on the DS Algo Sign in Page
-#When The user clicks login button after entering valid "numpygirls" and valid "@Aagks123"
-#Then The user should land in Data Structure Home Page 
+#Given The user is on the DS Algo Homepage
+#When The user clicks Get started button 
+#Then The user should see message and land in Data Structure Home Page 
 #

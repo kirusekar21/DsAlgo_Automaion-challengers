@@ -32,6 +32,7 @@ public class ArraySteps {
 
 	@Then("The User should navigate to Array Page")
 	public void the_user_should_navigate_to_array_page() {
+		
     array.ArrayGetStarted();
 	}
 }

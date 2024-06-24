@@ -1,9 +1,9 @@
   Feature: To Test Graph page
   
-  Scenario: DS Algo Sign in Page
-    Given The user is on the DS Algo Sign in Page
-    When The user clicks login button after entering valid "numpygirls" and valid "@Aagks123"
-    
+  Scenario: Login page
+  Given The User is on the DS Algo Sign in page
+  When The User clicks Login button after entering valid "numpygirls" and "@Aagks123"
+ 
   #Scenario: Graph home page
     #Given The user is on the graph home page
 
@@ -22,7 +22,7 @@
     When The user writes the valid python code
     And click run
     Then The user is able to see the output inside the console.
-#
+
   Scenario: Python Editor page
     Given The user refresh Python Editor
     When The user writes the invalid python code
@@ -60,5 +60,5 @@
     Given The user navigated back to graph page
     When The user clicks Practice Questions link
     Then The user should be redirected to Practice Questions page.
-    #
-#
+    
+

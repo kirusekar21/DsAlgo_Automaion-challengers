@@ -1,22 +1,39 @@
 package stepDefinitions;
 
+import java.io.IOException;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import PageObjectModel.*;
 //import dsalgo_Pages.dsalgo_Login;
 //import dsalgo_Pages.*;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import io.cucumber.java.en.Then;
+import utils.TestBaseT;
 
 public class LinkedList_def {
 	
 	private WebDriver driver;
-	private dsalgo_Login loginPage;
+	private dsalgo_Login loginPage = new dsalgo_Login(driver);
 	private home_page hmpage;
 	private LinkedList_Page llpage;
 	private Editor_Page edpage;
+	// trying 
+	
+	
+	
+	
+//	public TestBaseT tc;
+//	WebDriverWait wait=new  WebDriverWait(driver,Duration.ofSeconds(5));
+	
+	
+//		    tc=new TestBaseT();
+		    
+			
+	
 	
 /*	@Before
 	public void setup() {
@@ -41,17 +58,15 @@ public class LinkedList_def {
 	
 	@Given("user is on the linked list page")
 	public void inHomePage() throws InterruptedException {
-		
-		System.out.println("I am in Linked List Step definition");
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Alice\\Desktop\\Wksp\\CucumberJava\\src\\main\\resources\\drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get("https://dsportalapp.herokuapp.com/login");
-		loginPage = new dsalgo_Login(driver);
-		Thread.sleep(5000);
-		driver.manage().window().maximize();
-		hmpage = loginPage.doLogin("numpygirls", "@Aagks123");
-		llpage = hmpage.navigateLinkedList();
+//		
+//		System.out.println("I am in Linked List Step definition");
+////		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Alice\\Desktop\\Wksp\\CucumberJava\\src\\main\\resources\\drivers\\chromedriver.exe");
+//		driver = new ChromeDriver();
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//		driver.get("https://dsportalapp.herokuapp.com/login");
+//		llpage = hmpage.navigateLinkedList();
+//		hmpage = loginPage.doLogin("numpygirls", "@Aagks123");
+//		
 	}
 	
 	@Given("user clicks on the introduction link")
