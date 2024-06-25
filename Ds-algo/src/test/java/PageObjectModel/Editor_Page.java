@@ -6,9 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-
-
-
 public class Editor_Page {
 	
 	private WebDriver driver;
@@ -56,12 +53,10 @@ public class Editor_Page {
     		wb.close();
 			fis.close();
 		}
-		catch(Exception e) 
+		catch(Exception e)
 		{
 			System.out.println(e.getMessage());		
 		}
-
-
 		driver.findElement(run).click();
 		String otp = driver.findElement(output).getText();
 		System.out.println(otp);
@@ -89,5 +84,4 @@ public class Editor_Page {
 		
 		al.dismiss();
 	}
-
 }
