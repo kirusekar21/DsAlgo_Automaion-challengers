@@ -23,7 +23,7 @@ public class ArrayPage {
 		private By arraysPythonClickRunButton = By.xpath("//button[contains(text(),'Run')]");
 		private By arraysPythontextboxEditor1 = By.xpath("html/body/div/div/form/div/div/div[6]");
 		private By arraysPythonClickRunButton1 = By.xpath("//button[contains(text(),'Run')]");
-		private By arraysListLocator = By.xpath("//a[contains(text(),'Arrays Using List')]");
+		private By arraysListLocator = By.linkText("Arrays Using List");
 		private By arraysListTryHereLocator = By.xpath("//a[@href=\"/tryEditor\"]");
 		private By arraysListTextboxEditor = By.xpath("html/body/div/div/form/div/div/div[6]");
 		private By arraysListClickRunButton = By.xpath("//button[contains(text(),'Run')]");
@@ -48,10 +48,13 @@ public class ArrayPage {
 	    private By practicequestion3 = By.xpath("//a[@href=\"/question/3\"]");
 	    private By practicequestion4 = By.xpath("//a[@href=\"/question/4\"]");
 	  //div[@class='CodeMirror-scroll']//div[@class='CodeMirror-scroll']
+	    private By signout=By.linkText("Sign out");
     public void ArrayGetStarted() {
 		driver.findElement(AGetStarted).click();
     }
-   
+    public void signout() {
+    	driver.findElement(signout).click();
+    }
     public void clickarraysinpython() {
 		WebElement arraysPython = driver.findElement(arraysPythonLocator);
 		arraysPython.click();

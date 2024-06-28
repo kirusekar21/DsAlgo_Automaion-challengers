@@ -325,5 +325,9 @@ public class ArraySteps {
 	public void user_is_navigated_to_the_practice_questions_link_in_the_array_page() {
 		System.out.println("User is navigated to the practice questions page");
 	}
+	@Given ("sign out")
+	public void sign_out() {
+		login.signout();
+	}
 
 }

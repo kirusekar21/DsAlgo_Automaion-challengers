@@ -12,7 +12,7 @@ public class dsalgo_Login {
 	//By locators
 	private By username = By.id("id_username");
 	private By password = By.id("id_password");
-	private By signIn = By.xpath("//a[@href='/login']");
+	private By signIn = By.xpath("//a[@href='/login']"); 
 	private By login = By.xpath("//input[@value = 'Login']");
 	private By invalidMssg = By.xpath("//div[@role='alert']");
 	
@@ -37,8 +37,13 @@ public class dsalgo_Login {
 		loginbtn.click();
 	}
 	
-	public void invalidClick() {
-		
+	public void invalidClick()  {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.findElement(signIn).click();		
 		try {
 				String filePath = "src\\test\\resources\\TestData\\cred.xlsx";
@@ -72,8 +77,8 @@ public class dsalgo_Login {
 			
 		System.out.println(driver.getTitle());
 		if(driver != null) {
-			driver.close();
-			driver.quit();
+//			driver.close();
+//			driver.quit();
 		}
 	}
 	

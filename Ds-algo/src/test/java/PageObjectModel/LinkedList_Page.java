@@ -58,10 +58,10 @@ public class LinkedList_Page {
 	
 	public void clickSignOut() {
 		driver.findElement(signOut).click();
-		if(driver != null) {
-			driver.close();
-			driver.quit();
-		}
+//		if(driver != null) {
+//			driver.close();
+//			driver.quit();
+//		}
 	}
 }
 
@@ -75,7 +75,7 @@ public class LinkedList_Page {
 
 
 
-//Message team-ds-algo-project
+
 
 
 

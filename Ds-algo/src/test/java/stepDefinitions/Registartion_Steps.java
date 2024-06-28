@@ -18,6 +18,7 @@ import utils.TestBaseT;
 
 
 
+
 public class Registartion_Steps {
 	protected static WebDriver driver;
 	
@@ -33,7 +34,20 @@ public class Registartion_Steps {
 		graph=new graphPage(tc.WebDriverManager());
 	}
 	
-    
+   @Given("The user should be able to open the browser page")
+	public void the_user_should_be_able_to_open_the_browser_page() throws InterruptedException {
+	     System.out.println("user in home page");
+			}
+	
+	@When("The user enters the DS_Algo Page URL")
+	public void the_user_enters_the_ds_algo_page_url() {
+		register.startButton();
+	}
+	@Then("The user should land on the DS_Algo Get Started page")
+	public void the_user_should_land_on_the_ds_algo_get_started_page() {
+	   System.out.println("Preparing for the Interviews. You are at the right place!");
+	}
+	
 	@Given("The user is on new registration page")
 	public void the_user_is_on_new_registration_page() {
 	    System.out.println("User is on registration page");

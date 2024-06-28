@@ -15,7 +15,7 @@ public class RegistrationPage {
   private By password=By.id("id_password1");
   private By passwordConfirm=By.id("id_password2");
   private By loginInstead=By.linkText("Login");
-  
+ 
   public RegistrationPage(WebDriver driver) {
 	  this.driver=driver;
   }

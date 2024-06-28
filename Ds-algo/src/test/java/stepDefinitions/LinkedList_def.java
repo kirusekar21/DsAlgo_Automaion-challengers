@@ -14,7 +14,12 @@ public class LinkedList_def {
 	private home_page hmpage;
 	private LinkedList_Page llpage;
 	private Editor_Page edpage;
-	
+public LinkedList_def() throws IOException {
+	tc=new TestBaseT();
+	llpage=new LinkedList_Page(tc.WebDriverManager());
+	loginPage = new dsalgo_Login(tc.WebDriverManager());
+	edpage = new Editor_Page(tc.WebDriverManager());
+	}
 /*	@Before
 	public void setup() {
 		System.out.println("I am in Linked List Step definition");
@@ -46,11 +51,11 @@ public class LinkedList_def {
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 //		driver.get("https://dsportalapp.herokuapp.com/login");
 //		loginPage = new dsalgo_Login(driver);
-		try {
-			loginPage = new dsalgo_Login(tc.WebDriverManager());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+////			loginPage = new dsalgo_Login(tc.WebDriverManager());
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		Thread.sleep(5000);
 //		driver.manage().window().maximize()
 		hmpage = loginPage.doLogin("numpygirls", "@Aagks123");

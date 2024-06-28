@@ -15,7 +15,7 @@ private By loginBtn=By.linkText("Sign in");
 private By username=By.id("id_username");
 private By password=By.id("id_password");
 private By clickLogin=By.xpath("//input[@type=\"submit\"]");
-
+private By SignOut=By.linkText("Sign out");
 
 public void homeGetstarted() {
 	driver.findElement(homepage).click();
@@ -31,6 +31,11 @@ public void enterpassword(String pass) {
 	driver.findElement(password).sendKeys(pass);	
 }
 public void login_btn() {
-	driver.findElement(clickLogin).click();	
+	driver.findElement(clickLogin).click();
 }
+public void  signout() {
+		driver.findElement(SignOut).click();
+	}
 }
+
+

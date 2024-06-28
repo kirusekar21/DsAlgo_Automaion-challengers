@@ -19,12 +19,14 @@ public class graphPage {
 	 private By graph_Representations=By.linkText("Graph Representations");
 	 private By veriftGraphRepText=By.xpath("//strong/p[@class='bg-secondary text-white']");
 	 private By practiceQuestion=By.linkText("Practice Questions");
-	 
+	 private By signout=By.linkText("Sign out");
   public graphPage(WebDriver driver) {
 	  
 	     this.driver=driver;
 	 }
-	 
+  public void signout() {
+  	driver.findElement(signout).click();
+  } 
 	public void clickgraph() throws InterruptedException   {
 		Thread.sleep(2000);
 		driver.findElement(graphStarted).click();
