@@ -14,32 +14,14 @@ public class LinkedList_def {
 	private home_page hmpage;
 	private LinkedList_Page llpage;
 	private Editor_Page edpage;
+	
 public LinkedList_def() throws IOException {
 	tc=new TestBaseT();
 	llpage=new LinkedList_Page(tc.WebDriverManager());
 	loginPage = new dsalgo_Login(tc.WebDriverManager());
 	edpage = new Editor_Page(tc.WebDriverManager());
 	}
-/*	@Before
-	public void setup() {
-		System.out.println("I am in Linked List Step definition");
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Alice\\Desktop\\Wksp\\CucumberJava\\src\\main\\resources\\drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));		
-	}*/
-	
-/*	@Given("user inputs the wrong credentials")
-	public void inLoginPage() throws InterruptedException {
-		driver.get("https://dsportalapp.herokuapp.com/login");
-		loginPage = new dsalgo_Login(driver);
-		Thread.sleep(5000);
-		driver.manage().window().maximize();
-	}
-	
-	@Then("user is navigated wrong credentials message")
-	public void clickInvalid() {
-		loginPage.invalidClick();
-	}*/
+
 	
 	@Given("user is on the linked list page")
 	public void inHomePage() throws InterruptedException {

@@ -1,5 +1,6 @@
 
 Feature:  To Test New Regitration 
+
 Scenario: if user is able to open the browser page and go to the next page successfully
  Given The user should be able to open the browser page
  When The user enters the DS_Algo Page URL
